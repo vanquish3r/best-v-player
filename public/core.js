@@ -142,7 +142,7 @@ class Core {
     playlistButton.setAttribute('sq-boxcollider', 'size: 1 0.3 0.05');
     playlistButton.setAttribute('sq-interactable', '');
     const buttonGlb = document.createElement('a-entity');
-    buttonGlb.setAttribute('gltf-model','https://cdn.glitch.global/cf03534b-1293-4351-8903-ba15ffa931d3/ButtonL.glb?v=1689782699922');
+    buttonGlb.setAttribute('gltf-model','https://vanquish3r.github.io/best-v-player/images/ButtonL.glb');
     playlistButton.appendChild(buttonGlb);
     playlistButton.setAttribute('position', this.params["singer-button-position"]);
     playlistButton.setAttribute('rotation', this.params["singer-button-rotation"]);
@@ -212,7 +212,7 @@ class Core {
         position: "right", // `left`, `center` or `right`
         // stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
-          background: "url(https://cdn.glitch.global/0e90146e-13e1-4a7c-bf74-a3242ad522a7/Button_bg.png?v=1712857063078) center center no-repeat",
+          background: "url(https://vanquish3r.github.io/best-v-player/images/Button_bg.png) center center no-repeat",
           backgroundSize: "cover",
           opacity: 0.7,
           fontSize: "2em",
@@ -370,13 +370,13 @@ setupButton(scene, playlistContainer, xOffset, iconUrl, callback) {
     this.setOrDefault("spatial-min-distance", '5');
     this.setOrDefault("spatial-max-distance", '40');
     this.setOrDefault("youtube", "https://www.youtube.com/watch?v=L_LUpnjgPso");
-    this.setOrDefault("data-playlist-icon-url", "https://cdn.glitch.global/0e90146e-13e1-4a7c-bf74-a3242ad522a7/Playlist.png?v=1712832764389");
-    this.setOrDefault("data-vol-up-icon-url", "https://cdn.glitch.global/0e90146e-13e1-4a7c-bf74-a3242ad522a7/VolUp.png?v=1712832764100");
-    this.setOrDefault("data-vol-down-icon-url", "https://cdn.glitch.global/0e90146e-13e1-4a7c-bf74-a3242ad522a7/VolDown.png?v=1712832763785");
-    this.setOrDefault("data-mute-icon-url", "https://cdn.glitch.global/0e90146e-13e1-4a7c-bf74-a3242ad522a7/Mute.png?v=1712832764675");
-    this.setOrDefault("data-skip-forward-icon-url", "https://cdn.glitch.global/0e90146e-13e1-4a7c-bf74-a3242ad522a7/Forward.png?v=1712832763134");
-    this.setOrDefault("data-skip-backward-icon-url", "https://cdn.glitch.global/0e90146e-13e1-4a7c-bf74-a3242ad522a7/Backwardsd.png?v=1712832763443");
-    //this.playlistIconUrl = scriptTag.getAttribute('data-playlist-icon-url') || 'https://cdn.glitch.global/0e90146e-13e1-4a7c-bf74-a3242ad522a7/Playlist.png?v=1712832764389';
+    this.setOrDefault("data-playlist-icon-url", "https://vanquish3r.github.io/best-v-player/images/Playlist.png");
+    this.setOrDefault("data-vol-up-icon-url", "https://vanquish3r.github.io/best-v-player/images/VolUp.png");
+    this.setOrDefault("data-vol-down-icon-url", "https://vanquish3r.github.io/best-v-player/images/VolDown.png");
+    this.setOrDefault("data-mute-icon-url", "https://vanquish3r.github.io/best-v-player/images/Mute.png");
+    this.setOrDefault("data-skip-forward-icon-url", "https://vanquish3r.github.io/best-v-player/images/Forward.png");
+    this.setOrDefault("data-skip-backward-icon-url", "https://vanquish3r.github.io/best-v-player/images/Backwardsd.png");
+    //this.playlistIconUrl = scriptTag.getAttribute('data-playlist-icon-url') || 'https://vanquish3r.github.io/best-v-player/images/Playlist.png';
     
     this.params.volume = Number(this.params.volume);
     this.params['mip-maps'] = Number(this.params['mip-maps']);
@@ -554,23 +554,3 @@ setupButton(scene, playlistContainer, xOffset, iconUrl, callback) {
   }
 }
 window.videoPlayerCore = new Core();
-
-/*
- <script>
-        setTimeout(() => {
-          window.openPage("https://spotc.glitch.me/menu.html");
-
-        }, 6000);
-                setTimeout(() => {
-          window.banter.sendMenuBrowserMessage("here r message");
-
-        }, 10000);
-        window.addEventListener("menubrowsermessage", (e) => {
-          console.log("got thing");
-          window.banter.sendMenuBrowserMessage("ok did get: " + e.detail.message);
-          console.log(e);
-        });
-        
-
-      </script>
-*/
