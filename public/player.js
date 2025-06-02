@@ -1,6 +1,6 @@
 class Player {
   constructor(){
-    this.hostUrl = 'best-v-player.glitch.me';
+    this.hostUrl = 'best-v-player.onrender.com';
     this.currentScript = Array.from(document.getElementsByTagName('script')).slice(-1)[0];
     this.init();
   }
